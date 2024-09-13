@@ -1,0 +1,136 @@
+/* MainApp.css */
+
+.App {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="datetime-local"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+  }
+  
+  .weather-section {
+    margin: 20px 0;
+  }
+  
+  .weather-section h2 {
+    color: #4a90e2;
+  }
+  
+  .weather-section input[type="text"] {
+    width: calc(100% - 110px);
+    display: inline-block;
+  }
+  
+  .weather-section button {
+    width: 100px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .weather-data {
+    margin-top: 20px;
+  }
+  
+  .weather-data h3 {
+    margin-bottom: 10px;
+  }
+  
+  .weather-data p {
+    margin: 5px 0;
+  }
+  
+  .weather-data .forecast {
+    margin-top: 20px;
+  }
+  
+  .weather-data .forecast div {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .error {
+    color: #d9534f;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+  }
+  .App {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .news-section {
+    margin-top: 20px;
+  }
+  
+  .news-article {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .news-article h3 {
+    margin: 0;
+  }
+  
+  .news-article a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  #map {
+    margin-top: 20px;
+  }
+  
