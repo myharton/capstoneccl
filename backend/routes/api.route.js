@@ -7,11 +7,10 @@ const GOOGLE_CLIENT_ID =
   "1088234797181-l4aalmn8bdt4nhb302ktqrbmk6ak1pcg.apps.googleusercontent.com";
 const GOOGLE_CLIENT_SECRET =
   process.env.GOOGLE_CLIENT_SECRET || "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";
-const REDIRECT_URI = process.env.REDIRECT_URI || "http://localhost:3000";
+const REDIRECT_URI = process.env.REDIRECT_URI || "http://localhost:3001";
 
 // Placeholder for refresh token – you should save this securely after the OAuth flow
-let refresh_token = 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImIyNjIwZDVlN2YxMzJiNT…sryNmD8Hc--89PQEY1VJxZHBuWliWQAIPRrMMqNziPTD-rciw';
-
+let refresh_token = "YOUR_REFRESH_TOKEN";
 const oauth2Client = new google.auth.OAuth2(
   GOOGLE_CLIENT_ID,
   GOOGLE_CLIENT_SECRET,
@@ -30,12 +29,15 @@ router.post("/create-tokens", async (req, res, next) => {
     console.log(code);
     // Exchange authorization code for access token and refresh token
     const response = await oauth2Client.getToken(code);
-    console.log(response);
+    const tokens = response.tokens;
+    console.log("response", tokens);
+    console.log("refresh_token initial", refresh_token);
+    console.log("refresh_token", tokens.refresh_token);
     // Store the refresh token securely (for future use)
-    // refresh_token = tokens.refresh_token;
-    // console.log('Tokens received:', tokens);
+    refresh_token = tokens.refresh_token;
+    console.log("refresh_token", refresh_token);
 
-    res.send(response);
+    res.send(tokens);
   } catch (error) {
     console.error("Error in token generation:", error.message);
     next(error);
@@ -49,6 +51,7 @@ router.post("/create-event", async (req, res, next) => {
       req.body;
 
     // Set OAuth2 credentials, using refresh_token to refresh access token if needed
+    console.log("refresh token", refresh_token);
     oauth2Client.setCredentials({ refresh_token });
 
     // Initialize Google Calendar API client

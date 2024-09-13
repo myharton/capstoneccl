@@ -1,0 +1,76 @@
+/* Landing.css */
+
+.landing-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .landing-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .landing-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .landing-header p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+  
+  .google-login-button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .google-login-button:hover {
+    background-color: #357ae8;
+  }
+  
+  .features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .feature {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+  }
+  
+  .landing-footer {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
